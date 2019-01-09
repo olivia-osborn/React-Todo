@@ -40,16 +40,22 @@ class App extends React.Component {
     };
   }
 
-  handleChanges = (e) => {
+  handleChanges = e => {
     this.setState({[e.target.name]: e.target.value})
     console.log(e.target.name)
   }
+
+  addNewTask = e => {
+    e.preventDefault();
+    this.setState({data: [...this.state.data, {task: this.state.task}]});
+}
 
   render() {
     return (
       <div>
         <TodoList todoItems={this.state.data}/>
         <TodoForm 
+          addNewTask={this.addNewTask}
           handleChanges={this.handleChanges} 
           task={this.state.task}
         />

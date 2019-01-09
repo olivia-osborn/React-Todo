@@ -8,7 +8,7 @@ function TodoList(props) {
     return (
         <div>
             {props.todoItems.map((item) => {
-                return <div>{item.task}</div>
+                return <div key={item.id}>{item.task}</div>
             })}
         </div>
     )
