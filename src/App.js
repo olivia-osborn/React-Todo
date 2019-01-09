@@ -34,21 +34,14 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      toDoList: todoData,
-      task: "",
-      id: "",
-      completed: "",
-    }
+      data: todoData,
+    };
   }
-  handleChanges = e => {
-
-  }
-
 
   render() {
     return (
       <div>
-        <TodoList todoItems={this.state.toDoList}/>
+        <TodoList todoItems={this.state.data}/>
       </div>
     );
   }
