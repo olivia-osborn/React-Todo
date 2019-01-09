@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoList from "./components/TodoComponents/TodoList";
+import TodoForm from "./components/TodoComponents/TodoForm";
 
 //list of todo items: 
 const todoData = [
@@ -35,13 +36,23 @@ class App extends React.Component {
     super()
     this.state = {
       data: todoData,
+      task: "",
     };
+  }
+
+  handleChanges = (e) => {
+    this.setState({[e.target.name]: e.target.value})
+    console.log(e.target.name)
   }
 
   render() {
     return (
       <div>
         <TodoList todoItems={this.state.data}/>
+        <TodoForm 
+          handleChanges={this.handleChanges} 
+          task={this.state.task}
+        />
       </div>
     );
   }
