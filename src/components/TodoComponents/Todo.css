@@ -16,6 +16,9 @@
 .singleTask {
     text-align: center;
     font-size: 2rem;
+    border: 1px solid gray;
+    margin: 20px 0;
+    padding: 10px 20px;
 }
 
 .singleTask:hover {
