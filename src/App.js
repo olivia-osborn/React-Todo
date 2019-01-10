@@ -47,7 +47,14 @@ class App extends React.Component {
 
   addNewTask = e => {
     e.preventDefault();
-    this.setState({data: [...this.state.data, {task: this.state.task}]});
+    this.setState({data: [...this.state.data, {
+      task: this.state.task,
+      id: Date.now(),
+      completed: false
+    }],
+    
+    task: ""
+    });
 }
 
   render() {
