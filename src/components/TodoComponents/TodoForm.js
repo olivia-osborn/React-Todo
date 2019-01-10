@@ -5,7 +5,7 @@ function TodoForm(props) {
 
     return (
         <form>
-            <input 
+            <input
                 value={props.task} 
                 type="text" 
                 name="task"
