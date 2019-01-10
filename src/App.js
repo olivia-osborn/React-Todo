@@ -42,7 +42,6 @@ class App extends React.Component {
 
   handleChanges = e => {
     this.setState({[e.target.name]: e.target.value})
-    console.log(e.target.name)
   }
 
   addNewTask = e => {
@@ -57,9 +56,20 @@ class App extends React.Component {
     });
   }
 
-  toggleCompleted = () => {
-    console.log("it works!")
-  }
+  toggleCompleted = (id) => {
+    this.setState({
+      data: this.state.data.map(singleTodo => {
+        if (singleTodo.id !== id) {
+          return singleTodo;
+        } else {
+          return {
+            ...singleTodo,
+            completed: !singleTodo.completed
+          };
+        }
+      })
+    });
+  };
 
   render() {
     return (

@@ -11,12 +11,18 @@ function TodoForm(props) {
                 placeholder="Add new task" 
                 onChange={props.handleChanges}
             />
+            
             <button 
                 onClick={props.addNewTask}
             >
                 Add Todo
             </button>
-            <button>Clear Completed</button>
+
+            <button
+                onClick={}
+            >
+                Clear Completed
+            </button>
         </form>
     )
 }
