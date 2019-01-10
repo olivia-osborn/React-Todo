@@ -1,8 +1,8 @@
-// import React from "react";
+import React from "react";
 
-// function Todo(props) {
-//     return <div>{props.item.task}</div>
-// }
+function Todo(props) {
+    return <div onClick={props.toggleCompleted}>{props.item.task}</div>
+}
 
 
-// export default Todo;
+export default Todo;

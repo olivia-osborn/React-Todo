@@ -55,12 +55,16 @@ class App extends React.Component {
     
     task: ""
     });
-}
+  }
+
+  toggleCompleted = () => {
+    console.log("it works!")
+  }
 
   render() {
     return (
       <div>
-        <TodoList todoItems={this.state.data}/>
+        <TodoList toggleCompleted={this.toggleCompleted} todoItems={this.state.data}/>
         <TodoForm 
           addNewTask={this.addNewTask}
           handleChanges={this.handleChanges} 

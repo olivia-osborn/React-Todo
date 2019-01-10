@@ -2,13 +2,14 @@
 // feel free to change this component.js into TodoList.js
 
 import React from "react";
+import Todo from "./Todo";
 
 
 function TodoList(props) {
     return (
         <div>
             {props.todoItems.map((item) => {
-                return <div key={item.id}>{item.task}</div>
+                return <Todo toggleCompleted={props.toggleCompleted} key={item.id} item={item}/>
             })}
         </div>
     )
