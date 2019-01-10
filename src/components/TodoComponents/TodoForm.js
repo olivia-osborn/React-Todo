@@ -1,4 +1,5 @@
 import React from "react";
+import "./Todo.css";
 
 function TodoForm(props) {
 
@@ -11,7 +12,7 @@ function TodoForm(props) {
                 placeholder="Add new task" 
                 onChange={props.handleChanges}
             />
-            
+
             <button 
                 onClick={props.addNewTask}
             >
@@ -19,7 +20,7 @@ function TodoForm(props) {
             </button>
 
             <button
-                onClick={}
+                onClick={props.clearCompleted}
             >
                 Clear Completed
             </button>

@@ -1,0 +1,23 @@
+.app {
+    width: 800px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.list {
+    line-height: 3rem;
+}
+.singleTask {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.singleTask:hover {
+    cursor: pointer;
+}
