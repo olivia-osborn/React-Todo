@@ -1,0 +1,45 @@
+.app {
+    width: 800px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.completed {
+    text-decoration: line-through;
+    background: lightgray;
+}
+
+.list {
+    line-height: 3rem;
+}
+.singleTask {
+    text-align: center;
+    font-size: 2rem;
+    border: 1px solid gray;
+    margin: 20px 0;
+    padding: 10px 20px;
+}
+
+.singleTask:hover {
+    cursor: pointer;
+    background: lightgray;
+}
+button:hover {
+    cursor: pointer;
+}
+
+input {
+    height: 40px;
+    width: 100%;
+    font-size: 2rem;
+}
+
+button {
+    background: lightgray;
+    border: 1px solid gray;
+    height: 40px;
+    width: 50%;
+    margin: 10px 0;
+}
